@@ -29,7 +29,10 @@ public class Challenge4 {
 		System.out.println(aanTalManBoven24);
 		// 4. Geef de gemiddelde leeftijd van alle mannen
 		// Gemiddelde leeftijd mannen: 26.0
-
+		float leeftijdAlleMannen = (float) personen.stream().filter(p -> p.getGender() == Gender.MALE)
+				.mapToInt(Person::getAge).sum();
+		float avgLeeftijdMannen = leeftijdAlleMannen / personen.stream().filter(p -> p.getGender() == Gender.MALE).count();
+		System.out.println(avgLeeftijdMannen);
 		// 5. Maak een nieuwe persoon met als naam de eerste letter van iedere persoon
 		// in de lijst
 		// en als leeftijd de som van alle leeftijden
