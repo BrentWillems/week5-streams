@@ -13,8 +13,8 @@ public class Challenge4 {
 				new Person("Berend", 22, Gender.MALE), new Person("Aagje", 27, Gender.FEMALE));
 		// 1. Geef de gemiddelde leeftijd van alle personen
 		// Verwachte output: Gemiddelde leeftijd: 25.6
-		int somAllePersonen = personen.stream().mapToInt(Person::getAge).sum();
-		float avg = (float) somAllePersonen / personen.size();
+		int somLeeftijdenAllePersonen = personen.stream().mapToInt(Person::getAge).sum();
+		float avg = (float) somLeeftijdenAllePersonen / personen.size();
 		System.out.println(avg);
 
 		// 2. Hoeveel mannen staan er in de lijst
@@ -37,6 +37,8 @@ public class Challenge4 {
 		// in de lijst
 		// en als leeftijd de som van alle leeftijden
 		// Maak gebruik van de methode .reduce()
+	String naam =	personen.stream().map(c -> c.getName().substring(0,1)).reduce("", (acc,el) -> acc + el + "");
+	Person persoon = new Person(naam, somLeeftijdenAllePersonen, Gender.MALE);
 
 	}
 }
