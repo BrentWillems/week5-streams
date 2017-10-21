@@ -28,6 +28,7 @@ public class Challenge3 {
 		// 2. Druk alle namen af die beginnen met A (of a)
 		// Zorg dat de eerste letter van een naam steeds met hoofdletter begint.
 		// Verwachte output: Amelia Ava
+		topNames.stream().map(n -> StringUtils.capitalize(n)).sorted().filter(l -> l.startsWith("A")).forEach(System.out::println);
 		
 		
 		// 3. Hoeveel namen beginnen er met A
