@@ -2,6 +2,7 @@ package be.pxl.streams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import be.pxl.streams.Person.Gender;
 
@@ -22,7 +23,8 @@ public class Challenge4 {
 		
 		// 2. Hoeveel mannen staan er in de lijst
 		// Verwachte output: Aantal mannen: 3
-		
+	int aantalMan =	(int) personen.stream().filter(p -> p.getGender() == Gender.MALE).count();
+	System.out.println(aantalMan);
 		
 		// 3. Hoeveel mannen ouder dan 24 staan er in de lijst
 		// Verwachte output: Aantal mannen boven 24: 2
