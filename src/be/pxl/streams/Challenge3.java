@@ -33,7 +33,8 @@ public class Challenge3 {
 		
 		// 3. Hoeveel namen beginnen er met A
 		// Verwachte output: 2
-		
+	long aantalNamenBeginnenMetA =	topNames.stream().map(n -> StringUtils.capitalize(n)).sorted().filter(l -> l.startsWith("A")).count();
+	System.out.println(aantalNamenBeginnenMetA);
 		
 	}
 }
