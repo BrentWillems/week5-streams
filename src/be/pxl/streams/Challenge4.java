@@ -16,7 +16,9 @@ public class Challenge4 {
 		);
 		// 1. Geef de gemiddelde leeftijd van alle personen
 		// Verwachte output:  Gemiddelde leeftijd: 25.6
-		
+	int somAllePersonen =	personen.stream().mapToInt(Person::getAge).sum();
+	float avg = (float)somAllePersonen / personen.size();
+	System.out.println(avg);
 		
 		// 2. Hoeveel mannen staan er in de lijst
 		// Verwachte output: Aantal mannen: 3
